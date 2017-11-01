@@ -342,7 +342,8 @@
 <blockquote><p>(1) 在IE8以上的浏览器中, 通过在meta中设置X-UA-Compatible的值，可以指定网页的兼容性模式设置。<br>(2) 在网页中指定的模式优先权高于服务器中通过http header所指定的模式。<br>(3) X-UA-compatible 标头不区分大小写；不过，它必须显示在网页中除 title 元素和其他 meta 元素以外的所有其他元素之前。如果不是的话，它不起作用。</p>
 </blockquote>
 <h3 id="4-Viewport"><a href="#4-Viewport" class="headerlink" title="4. Viewport"></a>4. Viewport</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Viewport for responsive web design --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote></blockquote>
+<blockquote><p>(1) 手机浏览器是把页面放在一个虚拟的“窗口”（viewport）中，通常这个虚拟的“窗口”（viewport）比屏幕宽，这样就不用把每个网页挤到很小的窗口中（这样会破坏没有针对手机浏览器优化的网页的布局），用户可以通过平移和缩放来看网页的不同部分。<br>(2) width(height): 控制viewport的大小, 可以指定一个值, 或者特殊的值:device-width为设备的宽度。<br>(3) initial-scale: 初始缩放比例<br>(4) maximum-scale(minimum-scale): 允许用户缩放的最大(最小)比例。<br>(5) user-scalable: 用户是否可以手动缩放。<br>(6) target-densitydpi: 屏幕分辨率。</p>
+</blockquote>
 
           
         
