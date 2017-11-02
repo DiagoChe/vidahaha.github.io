@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Based on https://github.com/thedaviddias/Front-End-Checklist  5. Title1&amp;lt;title&amp;gt;Page Title less than 55 characters&amp;lt;/title&amp;gt; (1) 最近经常在网页游戏上看到动态的title, 写了一段：undefined (2) 才知道html中所有的标签包括head中的都">
+<meta name="description" content="Based on https://github.com/thedaviddias/Front-End-Checklist  5. Title1&amp;lt;title&amp;gt;Page Title less than 55 characters&amp;lt;/title&amp;gt; (1) 最近经常在网页游戏上看到动态的title, 写了一段：   123setInterval(function()&amp;#123;">
 <meta name="keywords" content="front-end-checklist">
 <meta property="og:type" content="article">
 <meta property="og:title" content="front-end-checklist-3">
 <meta property="og:url" content="http://vidahaha.github.io/2017/11/02/front-end-checklist-3/index.html">
 <meta property="og:site_name" content="vidahaha">
-<meta property="og:description" content="Based on https://github.com/thedaviddias/Front-End-Checklist  5. Title1&amp;lt;title&amp;gt;Page Title less than 55 characters&amp;lt;/title&amp;gt; (1) 最近经常在网页游戏上看到动态的title, 写了一段：undefined (2) 才知道html中所有的标签包括head中的都">
+<meta property="og:description" content="Based on https://github.com/thedaviddias/Front-End-Checklist  5. Title1&amp;lt;title&amp;gt;Page Title less than 55 characters&amp;lt;/title&amp;gt; (1) 最近经常在网页游戏上看到动态的title, 写了一段：   123setInterval(function()&amp;#123;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-02T11:08:07.971Z">
+<meta property="og:updated_time" content="2017-11-02T11:11:41.044Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="front-end-checklist-3">
-<meta name="twitter:description" content="Based on https://github.com/thedaviddias/Front-End-Checklist  5. Title1&amp;lt;title&amp;gt;Page Title less than 55 characters&amp;lt;/title&amp;gt; (1) 最近经常在网页游戏上看到动态的title, 写了一段：undefined (2) 才知道html中所有的标签包括head中的都">
+<meta name="twitter:description" content="Based on https://github.com/thedaviddias/Front-End-Checklist  5. Title1&amp;lt;title&amp;gt;Page Title less than 55 characters&amp;lt;/title&amp;gt; (1) 最近经常在网页游戏上看到动态的title, 写了一段：   123setInterval(function()&amp;#123;">
 
 
 
@@ -336,8 +336,10 @@
         <blockquote><p>Based on <a href="https://github.com/thedaviddias/Front-End-Checklist" target="_blank" rel="external">https://github.com/thedaviddias/Front-End-Checklist</a></p>
 </blockquote>
 <h3 id="5-Title"><a href="#5-Title" class="headerlink" title="5. Title"></a>5. Title</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Page Title less than 55 characters<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote><p>(1) 最近经常在网页游戏上看到动态的title, 写了一段：<br>undefined</p>
-<p>(2) 才知道html中所有的标签包括head中的都可以用js动态修改。。<br>(3) SEO：谷歌计算标题中使用的字符的像素宽度，在472到482像素之间截断。平均字符限制约为55个字符</p>
+<blockquote><p>(1) 最近经常在网页游戏上看到动态的title, 写了一段：</p>
+</blockquote>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">document</span>.title = <span class="string">'myTitle_'</span> + <span class="built_in">Math</span>.random().toFixed(<span class="number">2</span>);</div><div class="line">&#125;, <span class="number">1000</span>);</div></pre></td></tr></table></figure>
+<blockquote><p>(2) 才知道html中所有的标签包括head中的都可以用js动态修改。。<br>(3) SEO：谷歌计算标题中使用的字符的像素宽度，在472到482像素之间截断。平均字符限制约为55个字符</p>
 </blockquote>
 <h3 id="6-Description"><a href="#6-Description" class="headerlink" title="6. Description"></a>6. Description</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"Description of the page less than 150 characters"</span>&gt;</span></div></pre></td></tr></table></figure>
 <blockquote><p>(1) 它是独一无二的，不能超过150个字符。</p>
