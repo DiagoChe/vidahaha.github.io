@@ -345,6 +345,16 @@
 </blockquote>
 <h2 id="1-减少http请求"><a href="#1-减少http请求" class="headerlink" title="1. 减少http请求"></a>1. 减少http请求</h2><h3 id="图片地图"><a href="#图片地图" class="headerlink" title="图片地图"></a>图片地图</h3><blockquote><p>(1) 图片地图允许你在一个图片上关联多个URL, 我们通常使用HTML中的MAP标签实现。<br>(2) 缺点：手工方式定义图片上的坐标，而且除了矩形之外几乎无法定义其他形状。<br>(3) 导航栏或者多个超链接中的背景可以使用图片地图。 </p>
 </blockquote>
+<h3 id="CSS-Sprites"><a href="#CSS-Sprites" class="headerlink" title="CSS Sprites"></a>CSS Sprites</h3><blockquote><p>(1) 将多幅图片合并为一副单独的图片(一般是图标矢量图)。<br>(2) 通过background-position指定偏移量来取得图片区域。</p>
+</blockquote>
+<h3 id="内联图片"><a href="#内联图片" class="headerlink" title="内联图片"></a>内联图片</h3><blockquote><p>(1) 通过data:URL模式可以在web页面中包含图片但无需任何额外的HTTP请求。<br>(2) 图片的数据就在该URL自身之中,其格式为: data:[&lt;mediatype&gt;] [;base64],&lt;data&gt;<br>(3) data:URL是内联在页面中的，在跨越不同页面时不会被缓存。<br>(4) 该URL通过后端语言对图片编码输出，PHP中为base64_encode()。</p>
+</blockquote>
+<h3 id="合并脚本和样式表"><a href="#合并脚本和样式表" class="headerlink" title="合并脚本和样式表"></a>合并脚本和样式表</h3><blockquote><p>使用webpack打包[模块化]的组件</p>
+</blockquote>
+<h2 id="2-使用内容发布网络-CDN"><a href="#2-使用内容发布网络-CDN" class="headerlink" title="2. 使用内容发布网络(CDN)"></a>2. 使用内容发布网络(CDN)</h2><blockquote><p>如果web服务器离用户的距离更近，那么一个http请求的响应时间就会缩短。</p>
+</blockquote>
+<h2 id="3-添加Expires头"><a href="#3-添加Expires头" class="headerlink" title="3. 添加Expires头"></a>3. 添加Expires头</h2><h3 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h3><blockquote><p>(1) 在HTTP1.0中web服务器使用Expires头告知web客户端它可以使用一个组件的当前副本，直到指定时间为止。<font style="background-color:#666; color:#ddd; padding: 5px 10px 5px 10px;">Response Header: Expires: Mon, 15 Apr 2024 20:00:00 GMT</font><br>(2) 在HTTP1.1中引入了Cache-Control头来克服Expires头的限制，因为Expires要求服务器和客户端的时间严格同步，过期时间还要经常检查， 过期后还要重新配置。<br>(3) Cache-Control使用max-age指定组件被缓存多久，Cache-Control会覆盖Expires，<br>  <font style="background-color:#666; color:#ddd; padding: 5px 10px 5px 10px;">Response Header: Cache-Control: max-age=315360000</font><br>(4) 强缓存后再请求该组件，浏览器将会直接从缓存中读取(from memory cache, from disk cache)，<font color="red">虽然状态码仍为200,但是浏览器并没有产生http请求。</font></p>
+</blockquote>
           
         
       
