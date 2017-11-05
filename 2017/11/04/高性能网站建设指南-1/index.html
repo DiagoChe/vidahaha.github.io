@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="vidahaha">
 <meta property="og:description" content="这篇博客是我最近看的&amp;lt;&amp;lt;高性能网站建设指南&amp;gt;&amp;gt;一书中提出的14条优化规则加上我对其的理解整理而来。 所有规则的案例可以在http://stevesouders.com/hpws中找到并测试效果。 着重在network中观察Status, Time, Size, Cache-Control, Content-Encoding, Etag,   Last-Modified 和">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-05T03:02:51.119Z">
+<meta property="og:updated_time" content="2017-11-05T03:07:48.861Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高性能网站建设指南-1">
 <meta name="twitter:description" content="这篇博客是我最近看的&amp;lt;&amp;lt;高性能网站建设指南&amp;gt;&amp;gt;一书中提出的14条优化规则加上我对其的理解整理而来。 所有规则的案例可以在http://stevesouders.com/hpws中找到并测试效果。 着重在network中观察Status, Time, Size, Cache-Control, Content-Encoding, Etag,   Last-Modified 和">
@@ -350,9 +350,9 @@
 </blockquote>
 <h2 id="2-使用内容发布网络-CDN"><a href="#2-使用内容发布网络-CDN" class="headerlink" title="2. 使用内容发布网络(CDN)"></a>2. 使用内容发布网络(CDN)</h2><blockquote><p>如果web服务器离用户的距离更近，那么一个http请求的响应时间就会缩短。</p>
 </blockquote>
-<h2 id="3-添加Expires头"><a href="#3-添加Expires头" class="headerlink" title="3. 添加Expires头"></a>3. 添加Expires头</h2><h3 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h3><blockquote><p>(1) 在HTTP1.0中web服务器使用Expires头告知web客户端它可以使用一个组件的当前副本，直到指定时间为止。<font style="background-color:#666; color:#ddd; padding: 5px 10px 5px 10px;">Response Header: Expires: Mon, 15 Apr 2024 20:00:00 GMT</font><br>(2) 在HTTP1.1中引入了Cache-Control头来克服Expires头的限制，因为Expires要求服务器和客户端的时间严格同步，过期时间还要经常检查， 过期后还要重新配置。<br>(3) Cache-Control使用max-age指定组件被缓存多久，Cache-Control会覆盖Expires，<br>  <font style="background-color:#666; color:#ddd; padding: 5px 10px 5px 10px;">Response Header: Cache-Control: max-age=315360000</font><br>(4) 强缓存后再请求该组件，浏览器将会直接从缓存中读取(from memory cache, from disk cache)，<font color="red">虽然状态码仍为200,但是浏览器并没有产生http请求。</font><br>(5) 如果在缓存期间组件需要更新，可以通过修改组件名的方法让用户获得最新的组件。一般来说，可以把版本号嵌入组件名中，比如：example_v1.js。</p>
+<h2 id="3-添加Expires头"><a href="#3-添加Expires头" class="headerlink" title="3. 添加Expires头"></a>3. 添加Expires头</h2><h3 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h3><blockquote><p>(1) 在HTTP1.0中web服务器使用Expires头告知web客户端它可以使用一个组件的当前副本，直到指定时间为止。<font style="background-color:#666; color:#ddd; padding: 5px 10px 5px 10px;">Response Headers: Expires: Mon, 15 Apr 2024 20:00:00 GMT</font><br>(2) 在HTTP1.1中引入了Cache-Control头来克服Expires头的限制，因为Expires要求服务器和客户端的时间严格同步，过期时间还要经常检查， 过期后还要重新配置。<br>(3) Cache-Control使用max-age指定组件被缓存多久，Cache-Control会覆盖Expires，<br>  <font style="background-color:#666; color:#ddd; padding: 5px 10px 5px 10px;">Response Headers: Cache-Control: max-age=315360000</font><br>(4) 强缓存后再请求该组件，浏览器将会直接从缓存中读取(from memory cache, from disk cache)，<font color="red">虽然状态码仍为200,但是浏览器并没有产生http请求。</font><br>(5) 如果在缓存期间组件需要更新，可以通过修改组件名的方法让用户获得最新的组件。一般来说，可以把版本号嵌入组件名中，比如：example_v1.js。</p>
 </blockquote>
-<h3 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h3><blockquote><p>(1) Response Header: Last-Modified or Etag<br>(2) Request Header: If-Modified-Since or If-None-Match<br>(3) 协商缓存返回状态码304(not modified)<br>(4) 详细内容在后面的规则会提到=.=</p>
+<h3 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h3><blockquote><p>(1) Response Headers: Last-Modified or Etag<br>(2) Request Headers: If-Modified-Since or If-None-Match<br>(3) 协商缓存返回状态码304(not modified)<br>(4) 详细内容在后面的规则会提到=.=</p>
 </blockquote>
       
     </div>
