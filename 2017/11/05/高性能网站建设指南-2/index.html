@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="vidahaha">
 <meta property="og:description" content="4. 压缩组件(1) 该规则通过减少HTTP响应的大小来减少响应时间。(2) web客户端可以通过HTTP请求中的Accept-Encoding头来表示对压缩的支持。 Request Headers: Accept-Encoding: gzip, deflate Response Headers: Content-Encoding: gzip(3) 图片和PDF不应该压缩，它们本来就被压缩了。试图">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-05T03:11:12.058Z">
+<meta property="og:updated_time" content="2017-11-05T03:35:37.441Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高性能网站建设指南-2">
 <meta name="twitter:description" content="4. 压缩组件(1) 该规则通过减少HTTP响应的大小来减少响应时间。(2) web客户端可以通过HTTP请求中的Accept-Encoding头来表示对压缩的支持。 Request Headers: Accept-Encoding: gzip, deflate Response Headers: Content-Encoding: gzip(3) 图片和PDF不应该压缩，它们本来就被压缩了。试图">
@@ -337,6 +337,10 @@
 <p><font style="background-color:#666; color:#ddd; padding: 5px 10px 5px 10px;">Request Headers: Accept-Encoding: gzip, deflate</font></p>
 <p><font style="background-color:#666; color:#ddd; padding: 5px 10px 5px 10px;">Response Headers: Content-Encoding: gzip</font><br>(3) 图片和PDF不应该压缩，它们本来就被压缩了。试图对其压缩不仅耗费CPU的资源，还可能增加文件大小。<br>(4) 压缩的成本———服务器会花费额外的CPU周期完成压缩，客户端还得花时间解压。</p>
 </blockquote>
+<h2 id="5-将样式表放在顶部"><a href="#5-将样式表放在顶部" class="headerlink" title="5. 将样式表放在顶部"></a>5. 将样式表放在顶部</h2><blockquote><p>(1) 在浏览器和用户等待底部的样式表时，浏览器会延时显示任何可视化组件，这种现象叫做”白屏”。<br>(2) 样式表导入的规则：link标签和@import规则，@import规则在所有规则之前才能生效，并且会导致组件下载时的无序性。<br>(3) 样式表在页面中的位置不影响下载时间，但是会影响页面的呈现。</p>
+</blockquote>
+<h2 id="6-将脚本放在底部"><a href="#6-将脚本放在底部" class="headerlink" title="6. 将脚本放在底部"></a>6. 将脚本放在底部</h2><blockquote><p>(1) HTTP1.1规范中建议每个主机名并行下载两个组件，但是工程师和用户可以自行修改配置。<br>(2) 增加并行下载数量不是没有开销的：取决于你的带宽和CPU速度，过多的并行下载反而会降低性能。<br>(3) 脚本不能并行下载，其一是脚本可能改变页面内容，其二是保证脚本能够按照正确的顺序执行。<br>(4) 将脚本放在顶部会导致: 阻塞后面页面的呈现 和 阻塞后面组件的下载。<br>(5) <font color="red">如果一个脚本可以延迟，那么它一定可以移动到页面的底部。</font></p>
+</blockquote>
 
       
     </div>
@@ -509,7 +513,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-压缩组件"><span class="nav-number">1.</span> <span class="nav-text">4. 压缩组件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-压缩组件"><span class="nav-number">1.</span> <span class="nav-text">4. 压缩组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-将样式表放在顶部"><span class="nav-number">2.</span> <span class="nav-text">5. 将样式表放在顶部</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-将脚本放在底部"><span class="nav-number">3.</span> <span class="nav-text">6. 将脚本放在底部</span></a></li></ol></div>
             
 
           </div>
