@@ -370,6 +370,8 @@
 </blockquote>
 <h2 id="8-使用外部JavaScript和CSS"><a href="#8-使用外部JavaScript和CSS" class="headerlink" title="8. 使用外部JavaScript和CSS"></a>8. 使用外部JavaScript和CSS</h2><blockquote><p>(1) 纯粹来说，外部组件要承担更多的HTTP请求带来的开销。<br>(2) 外部组件的收益: 有机会被浏览器缓存下来。内联组件由于被包含在动态的HTML中，通常不会被配置为可以进行缓存。<br>(3) 每个用户产生的页面浏览量越少，内联组件表现的越好。<br>(4) 如果网站的每个页面中都使用了相同的JavaScript和CSS，使用外部文件可以提高文件的重用率。</p>
 </blockquote>
+<h2 id="9-减少DNS查找"><a href="#9-减少DNS查找" class="headerlink" title="9. 减少DNS查找"></a>9. 减少DNS查找</h2><blockquote><p>(1) 很多浏览器都有自己的DNS缓存，和操作系统的缓存相分离，只有当浏览器丢弃了记录后它才会向操作系统询问地址。<br>(2) 服务器可以表明记录可以被缓存多久，查找返回的DNS记录包含了一个存活的时间(TTL)。操作系统会考虑TTL，但是浏览器通常忽略该值，并设置它自己的时间限制。<br>(3) Keep-Alive会覆盖TTL和浏览器的时间限制，意思是只要TCP保持打开，就不会进行DNS查找。<br>(4) 当客户端没有DNS缓存时，DNS查找的数量和WEB页面中唯一主机名的数量相等，所以减少唯一主机名的数量就可以减少DNS查找的数量。<br>(5) PC端采用域名发散，增加主机名的数量，提高页面的并行下载数量。<br>(6) 移动端采用域名收敛，减少主机名的数量，提高DNS的查找速度。<br>(7) DNS查找的时间和并行下载的时间需要仔细权衡。</p>
+</blockquote>
 
           
         
