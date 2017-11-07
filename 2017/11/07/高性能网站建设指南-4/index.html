@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="10. 精简JavaScript(1) 精简：移除不必要的字符(空格，换行和制表符)和所有的注释来减少文件的大小。(2) 混淆：除了精简外，它还会改写代码，函数和变量的名字将被转换为更短的字符串。(3) 精简脚本可以降低响应时间，但是不会带来混淆的风险。(4) 脚本可以通过gzip压缩后再用其它工具精简。  11. 避免重定向">
+<meta name="description" content="10. 精简JavaScript(1) 精简：移除不必要的字符(空格，换行和制表符)和所有的注释来减少文件的大小。(2) 混淆：除了精简外，它还会改写代码，函数和变量的名字将被转换为更短的字符串。(3) 精简脚本可以降低响应时间，但是不会带来混淆的风险。(4) 脚本可以通过gzip压缩后再用其它工具精简。  11. 避免重定向(1) 重定向中301, 302是最常用的两种，重定向会使你的页面变慢。">
 <meta name="keywords" content="高性能网站建设指南">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高性能网站建设指南-4">
 <meta property="og:url" content="http://vidahaha.github.io/2017/11/07/高性能网站建设指南-4/index.html">
 <meta property="og:site_name" content="vidahaha">
-<meta property="og:description" content="10. 精简JavaScript(1) 精简：移除不必要的字符(空格，换行和制表符)和所有的注释来减少文件的大小。(2) 混淆：除了精简外，它还会改写代码，函数和变量的名字将被转换为更短的字符串。(3) 精简脚本可以降低响应时间，但是不会带来混淆的风险。(4) 脚本可以通过gzip压缩后再用其它工具精简。  11. 避免重定向">
+<meta property="og:description" content="10. 精简JavaScript(1) 精简：移除不必要的字符(空格，换行和制表符)和所有的注释来减少文件的大小。(2) 混淆：除了精简外，它还会改写代码，函数和变量的名字将被转换为更短的字符串。(3) 精简脚本可以降低响应时间，但是不会带来混淆的风险。(4) 脚本可以通过gzip压缩后再用其它工具精简。  11. 避免重定向(1) 重定向中301, 302是最常用的两种，重定向会使你的页面变慢。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-07T02:06:57.381Z">
+<meta property="og:updated_time" content="2017-11-07T02:29:02.068Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高性能网站建设指南-4">
-<meta name="twitter:description" content="10. 精简JavaScript(1) 精简：移除不必要的字符(空格，换行和制表符)和所有的注释来减少文件的大小。(2) 混淆：除了精简外，它还会改写代码，函数和变量的名字将被转换为更短的字符串。(3) 精简脚本可以降低响应时间，但是不会带来混淆的风险。(4) 脚本可以通过gzip压缩后再用其它工具精简。  11. 避免重定向">
+<meta name="twitter:description" content="10. 精简JavaScript(1) 精简：移除不必要的字符(空格，换行和制表符)和所有的注释来减少文件的大小。(2) 混淆：除了精简外，它还会改写代码，函数和变量的名字将被转换为更短的字符串。(3) 精简脚本可以降低响应时间，但是不会带来混淆的风险。(4) 脚本可以通过gzip压缩后再用其它工具精简。  11. 避免重定向(1) 重定向中301, 302是最常用的两种，重定向会使你的页面变慢。">
 
 
 
@@ -365,7 +365,10 @@
       
         <h2 id="10-精简JavaScript"><a href="#10-精简JavaScript" class="headerlink" title="10. 精简JavaScript"></a>10. 精简JavaScript</h2><blockquote><p>(1) 精简：移除不必要的字符(空格，换行和制表符)和所有的注释来减少文件的大小。<br>(2) 混淆：除了精简外，它还会改写代码，函数和变量的名字将被转换为更短的字符串。<br>(3) 精简脚本可以降低响应时间，但是不会带来混淆的风险。<br>(4) 脚本可以通过gzip压缩后再用其它工具精简。</p>
 </blockquote>
-<h2 id="11-避免重定向"><a href="#11-避免重定向" class="headerlink" title="11. 避免重定向"></a>11. 避免重定向</h2><blockquote></blockquote>
+<h2 id="11-避免重定向"><a href="#11-避免重定向" class="headerlink" title="11. 避免重定向"></a>11. 避免重定向</h2><blockquote><p>(1) 重定向中301, 302是最常用的两种，重定向会使你的页面变慢。<br>(2) 重定向延迟了整个HTML文档的传输。</p>
+</blockquote>
+<h2 id="12-删除重复脚本"><a href="#12-删除重复脚本" class="headerlink" title="12. 删除重复脚本"></a>12. 删除重复脚本</h2><blockquote><p>团队越多，脚本数量越大，产生重复脚本的概率越大。对于高概率被引用的脚本，通过包管理系统，确保脚本只被包含一次。</p>
+</blockquote>
       
     </div>
     
@@ -537,7 +540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-精简JavaScript"><span class="nav-number">1.</span> <span class="nav-text">10. 精简JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-避免重定向"><span class="nav-number">2.</span> <span class="nav-text">11. 避免重定向</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-精简JavaScript"><span class="nav-number">1.</span> <span class="nav-text">10. 精简JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-避免重定向"><span class="nav-number">2.</span> <span class="nav-text">11. 避免重定向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-删除重复脚本"><span class="nav-number">3.</span> <span class="nav-text">12. 删除重复脚本</span></a></li></ol></div>
             
 
           </div>
