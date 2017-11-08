@@ -368,6 +368,8 @@
           
             <h2 id="13-配置ETag"><a href="#13-配置ETag" class="headerlink" title="13. 配置ETag"></a>13. 配置ETag</h2><blockquote><p>(1) Last-Modified 和 ETag 是协商缓存，返回304，前面规则2有提到过。<br>(2) 没有强缓存时使用协商缓存。<br>(3) 服务器通过Last-Modified响应头来返回组件的最新修改日期，浏览器使用If-Modified-Since头将最新修改日期传回到原始服务器进行比较，如果服务器上组件的最新修改日期和浏览器传回的值匹配，则返回304 Not Modified。<br>(4) ETag 检测浏览器缓存中的组件与原始服务器上的组件是否匹配，它比验证修改日期更加灵活，优先级也更高。浏览器使用If-None-Match头将一串标识符传回服务器进行匹配。 </p>
 </blockquote>
+<h2 id="14-使Ajax可缓存"><a href="#14-使Ajax可缓存" class="headerlink" title="14. 使Ajax可缓存"></a>14. 使Ajax可缓存</h2><blockquote><p>(1) ajax默认是不缓存的，通过改变HTTP头和将用户名放入查询字符串中来解决。<br>(2) 这里有点晕，没有接触过，容我琢磨琢磨。</p>
+</blockquote>
 
           
         
