@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="高性能网站建设指南," />
+  <meta name="keywords" content="引用类型的各种操作方法," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="10. 精简JavaScript(1) 精简：移除不必要的字符(空格，换行和制表符)和所有的注释来减少文件的大小。(2) 混淆：除了精简外，它还会改写代码，函数和变量的名字将被转换为更短的字符串。(3) 精简脚本可以降低响应时间，但是不会带来混淆的风险。(4) 脚本可以通过gzip压缩后再用其它工具精简。  11. 避免重定向(1) 重定向中301, 302是最常用的两种，重定向会使你的页面变慢。">
-<meta name="keywords" content="高性能网站建设指南">
+<meta name="description" content="概括计划把es5,es6中的所有引用类型(Object, Array, Date, RegExp, Function, Boolean, Number, String, Global, Math)的各种操作方法给上手总结下，熟悉和理解。  Object">
+<meta name="keywords" content="引用类型的各种操作方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="高性能网站建设指南-4">
-<meta property="og:url" content="http://vidahaha.github.io/2017/11/07/高性能网站建设指南-4/index.html">
+<meta property="og:title" content="各种引用类型的操作方法-1">
+<meta property="og:url" content="http://vidahaha.github.io/2017/11/09/各种引用类型的操作方法-1/index.html">
 <meta property="og:site_name" content="vidahaha">
-<meta property="og:description" content="10. 精简JavaScript(1) 精简：移除不必要的字符(空格，换行和制表符)和所有的注释来减少文件的大小。(2) 混淆：除了精简外，它还会改写代码，函数和变量的名字将被转换为更短的字符串。(3) 精简脚本可以降低响应时间，但是不会带来混淆的风险。(4) 脚本可以通过gzip压缩后再用其它工具精简。  11. 避免重定向(1) 重定向中301, 302是最常用的两种，重定向会使你的页面变慢。">
+<meta property="og:description" content="概括计划把es5,es6中的所有引用类型(Object, Array, Date, RegExp, Function, Boolean, Number, String, Global, Math)的各种操作方法给上手总结下，熟悉和理解。  Object">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-07T02:29:02.068Z">
+<meta property="og:updated_time" content="2017-11-09T13:23:35.661Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="高性能网站建设指南-4">
-<meta name="twitter:description" content="10. 精简JavaScript(1) 精简：移除不必要的字符(空格，换行和制表符)和所有的注释来减少文件的大小。(2) 混淆：除了精简外，它还会改写代码，函数和变量的名字将被转换为更短的字符串。(3) 精简脚本可以降低响应时间，但是不会带来混淆的风险。(4) 脚本可以通过gzip压缩后再用其它工具精简。  11. 避免重定向(1) 重定向中301, 302是最常用的两种，重定向会使你的页面变慢。">
+<meta name="twitter:title" content="各种引用类型的操作方法-1">
+<meta name="twitter:description" content="概括计划把es5,es6中的所有引用类型(Object, Array, Date, RegExp, Function, Boolean, Number, String, Global, Math)的各种操作方法给上手总结下，熟悉和理解。  Object">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://vidahaha.github.io/2017/11/07/高性能网站建设指南-4/"/>
+  <link rel="canonical" href="http://vidahaha.github.io/2017/11/09/各种引用类型的操作方法-1/"/>
 
 
 
 
 
-  <title>高性能网站建设指南-4 | vidahaha</title>
+  <title>各种引用类型的操作方法-1 | vidahaha</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vidahaha.github.io/2017/11/07/高性能网站建设指南-4/">
+    <link itemprop="mainEntityOfPage" href="http://vidahaha.github.io/2017/11/09/各种引用类型的操作方法-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vidahaha">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">高性能网站建设指南-4</h1>
+          <h1 class="post-title" itemprop="name headline">各种引用类型的操作方法-1</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-07T09:49:42+08:00">
-                2017-11-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-09T21:19:01+08:00">
+                2017-11-09
               </time>
             
 
@@ -326,8 +326,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web开发/前端性能优化/" itemprop="url" rel="index">
-                    <span itemprop="name">前端性能优化</span>
+                  <a href="/categories/web开发/api大全/" itemprop="url" rel="index">
+                    <span itemprop="name">api大全</span>
                   </a>
                 </span>
 
@@ -363,12 +363,10 @@
       
 
       
-        <h2 id="10-精简JavaScript"><a href="#10-精简JavaScript" class="headerlink" title="10. 精简JavaScript"></a>10. 精简JavaScript</h2><blockquote><p>(1) 精简：移除不必要的字符(空格，换行和制表符)和所有的注释来减少文件的大小。<br>(2) 混淆：除了精简外，它还会改写代码，函数和变量的名字将被转换为更短的字符串。<br>(3) 精简脚本可以降低响应时间，但是不会带来混淆的风险。<br>(4) 脚本可以通过gzip压缩后再用其它工具精简。</p>
+        <h2 id="概括"><a href="#概括" class="headerlink" title="概括"></a>概括</h2><blockquote><p>计划把es5,es6中的所有引用类型(Object, Array, Date, RegExp, Function, Boolean, Number, String, Global, Math)的各种操作方法给上手总结下，熟悉和理解。</p>
 </blockquote>
-<h2 id="11-避免重定向"><a href="#11-避免重定向" class="headerlink" title="11. 避免重定向"></a>11. 避免重定向</h2><blockquote><p>(1) 重定向中301, 302是最常用的两种，重定向会使你的页面变慢。<br>(2) 重定向延迟了整个HTML文档的传输。</p>
-</blockquote>
-<h2 id="12-删除重复脚本"><a href="#12-删除重复脚本" class="headerlink" title="12. 删除重复脚本"></a>12. 删除重复脚本</h2><blockquote><p>团队越多，脚本数量越大，产生重复脚本的概率越大。对于高概率被引用的脚本，通过包管理系统，确保脚本只被包含一次。</p>
-</blockquote>
+<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><blockquote></blockquote>
+
       
     </div>
     
@@ -385,7 +383,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/高性能网站建设指南/" rel="tag"># 高性能网站建设指南</a>
+            <a href="/tags/引用类型的各种操作方法/" rel="tag"># 引用类型的各种操作方法</a>
           
         </div>
       
@@ -398,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/06/高性能网站建设指南-3/" rel="next" title="高性能网站建设指南-3">
-                <i class="fa fa-chevron-left"></i> 高性能网站建设指南-3
+              <a href="/2017/11/08/高性能网站建设-5/" rel="next" title="高性能网站建设-5">
+                <i class="fa fa-chevron-left"></i> 高性能网站建设-5
               </a>
             
           </div>
@@ -407,10 +405,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/08/高性能网站建设-5/" rel="prev" title="高性能网站建设-5">
-                高性能网站建设-5 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -544,7 +538,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-精简JavaScript"><span class="nav-number">1.</span> <span class="nav-text">10. 精简JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-避免重定向"><span class="nav-number">2.</span> <span class="nav-text">11. 避免重定向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-删除重复脚本"><span class="nav-number">3.</span> <span class="nav-text">12. 删除重复脚本</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概括"><span class="nav-number">1.</span> <span class="nav-text">概括</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object"><span class="nav-number">2.</span> <span class="nav-text">Object</span></a></li></ol></div>
             
 
           </div>
