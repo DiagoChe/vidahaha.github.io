@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="概括计划把es5,es6中的所有引用类型(Object, Array, Date, RegExp, Function, Boolean, Number, String, Global, Math)的各种操作方法给上手总结下，熟悉和理解。  Object">
+<meta name="description" content="概括计划把es5,es6中的所有引用类型(Object, Array, Date, RegExp, Function, Boolean, Number, String, Global, Math)的各种操作方法给上手总结下，熟悉和理解。  Object(1) Object构造函数为给定值创建一个对象包装器。如果给定值是null或undefined，将会创建并返回一个空对象，否则，将返回一个与给定值">
 <meta name="keywords" content="引用类型的各种操作方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="各种引用类型的操作方法-1">
 <meta property="og:url" content="http://vidahaha.github.io/2017/11/09/各种引用类型的操作方法-1/index.html">
 <meta property="og:site_name" content="vidahaha">
-<meta property="og:description" content="概括计划把es5,es6中的所有引用类型(Object, Array, Date, RegExp, Function, Boolean, Number, String, Global, Math)的各种操作方法给上手总结下，熟悉和理解。  Object">
+<meta property="og:description" content="概括计划把es5,es6中的所有引用类型(Object, Array, Date, RegExp, Function, Boolean, Number, String, Global, Math)的各种操作方法给上手总结下，熟悉和理解。  Object(1) Object构造函数为给定值创建一个对象包装器。如果给定值是null或undefined，将会创建并返回一个空对象，否则，将返回一个与给定值">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-09T13:23:35.661Z">
+<meta property="og:updated_time" content="2017-11-10T07:27:27.077Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="各种引用类型的操作方法-1">
-<meta name="twitter:description" content="概括计划把es5,es6中的所有引用类型(Object, Array, Date, RegExp, Function, Boolean, Number, String, Global, Math)的各种操作方法给上手总结下，熟悉和理解。  Object">
+<meta name="twitter:description" content="概括计划把es5,es6中的所有引用类型(Object, Array, Date, RegExp, Function, Boolean, Number, String, Global, Math)的各种操作方法给上手总结下，熟悉和理解。  Object(1) Object构造函数为给定值创建一个对象包装器。如果给定值是null或undefined，将会创建并返回一个空对象，否则，将返回一个与给定值">
 
 
 
@@ -365,7 +365,9 @@
       
         <h2 id="概括"><a href="#概括" class="headerlink" title="概括"></a>概括</h2><blockquote><p>计划把es5,es6中的所有引用类型(Object, Array, Date, RegExp, Function, Boolean, Number, String, Global, Math)的各种操作方法给上手总结下，熟悉和理解。</p>
 </blockquote>
-<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><blockquote></blockquote>
+<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><blockquote><p>(1) Object构造函数为给定值创建一个对象包装器。如果给定值是null或undefined，将会创建并返回一个空对象，否则，将返回一个与给定值对应类型的对象。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> x = <span class="number">0</span>,</div><div class="line">	y = <span class="number">1</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> x) <span class="comment">// number</span></div><div class="line"><span class="keyword">let</span> foo = <span class="keyword">new</span> <span class="built_in">Object</span>(x)</div><div class="line"><span class="built_in">console</span>.log( foo <span class="keyword">instanceof</span> <span class="built_in">Number</span> ) <span class="comment">// True</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> bar = <span class="keyword">new</span> <span class="built_in">Number</span>(y)</div><div class="line"><span class="built_in">console</span>.log( bar <span class="keyword">instanceof</span> <span class="built_in">Number</span> ) <span class="comment">// True</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> boo = <span class="keyword">new</span> <span class="built_in">Object</span>( <span class="literal">null</span> )</div><div class="line"><span class="built_in">console</span>.log( boo ) <span class="comment">// &#123;&#125;</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> coo = <span class="keyword">new</span> <span class="built_in">Object</span>( <span class="literal">undefined</span> )</div><div class="line"><span class="built_in">console</span>.log( coo ) <span class="comment">// &#123;&#125;</span></div></pre></td></tr></table></figure>
 
       
     </div>
