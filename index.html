@@ -360,9 +360,13 @@
 <h3 id="善于查看错误日志"><a href="#善于查看错误日志" class="headerlink" title="善于查看错误日志"></a>善于查看错误日志</h3><blockquote><p><em>几乎所有的错误都可以在/var/log/httpd/error_log中找到。</em></p>
 </blockquote>
 <h3 id="php执行shell"><a href="#php执行shell" class="headerlink" title="php执行shell"></a>php执行shell</h3><ul>
-<li>无法读取和写入文件?<blockquote><p>解决方法: 给文件上777权限。</p>
+<li>无法读取和写入文件?<blockquote><p>解决方法: 给文件夹上777权限。</p>
 </blockquote></li>
-<li>sh: /xx/xx/xx -xx: Permission denied<blockquote><p>解决方法: 首先弄明白是哪个权限在执行这个shell命令。使用id -a 可以查到, php中是apache权限。</p>
+<li>sh: /xx/xx/xx -xx: Permission denied<blockquote><p>解决方法:<br>(1) 首先弄明白是哪个权限在执行这个shell命令。使用id -a 可以查到, php中是apache权限。<br>(2) 在/etc/sudoers 中在 “root    ALL=(ALL)     ALL” 的下方添加<br>    www ALL=(ALL)NOPASSWD: ALL<br>    apache ALL=(ALL)NOPASSWD: ALL<br>(3) 使用 sudo 执行 shell 命令: sudo /xx/xx/xx -xx    </p>
+</blockquote></li>
+<li>sudo: unable to mkdir /var/db/sudo/apache: Permission denied<blockquote><p>解决方法: 给apache文件夹上777权限。</p>
+</blockquote></li>
+<li>sudo: unable to open audit system: Permission denied<blockquote><p>解决方法: 关闭SELinux。 修改/etc/selinux/config 文件, 将SELINUX=enforcing改为SELINUX=disabled</p>
 </blockquote>
 </li>
 </ul>
