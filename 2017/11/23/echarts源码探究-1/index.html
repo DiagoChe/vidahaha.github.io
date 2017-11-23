@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="vidahaha's blog" />
+  <meta name="keywords" content="echarts源码探究," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="Wubba lubba dub dub">
-<meta property="og:type" content="website">
-<meta property="og:title" content="vidahaha">
-<meta property="og:url" content="http://vidahaha.github.io/archives/index.html">
+<meta name="description" content="概括对canvas中绑定事件还挺感兴趣，图表框架在之前只用过，没有了解内部原理，抽点时间研究下:)  开头(function (global, factory) {     typeof exports === &apos;object&apos; &amp;amp;&amp;amp; typeof module !== &apos;undefined&apos; ? factory(exports) :     typeof define === &apos;">
+<meta name="keywords" content="echarts源码探究">
+<meta property="og:type" content="article">
+<meta property="og:title" content="echarts源码探究-1">
+<meta property="og:url" content="http://vidahaha.github.io/2017/11/23/echarts源码探究-1/index.html">
 <meta property="og:site_name" content="vidahaha">
-<meta property="og:description" content="Wubba lubba dub dub">
+<meta property="og:description" content="概括对canvas中绑定事件还挺感兴趣，图表框架在之前只用过，没有了解内部原理，抽点时间研究下:)  开头(function (global, factory) {     typeof exports === &apos;object&apos; &amp;amp;&amp;amp; typeof module !== &apos;undefined&apos; ? factory(exports) :     typeof define === &apos;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-23T12:42:58.829Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vidahaha">
-<meta name="twitter:description" content="Wubba lubba dub dub">
+<meta name="twitter:title" content="echarts源码探究-1">
+<meta name="twitter:description" content="概括对canvas中绑定事件还挺感兴趣，图表框架在之前只用过，没有了解内部原理，抽点时间研究下:)  开头(function (global, factory) {     typeof exports === &apos;object&apos; &amp;amp;&amp;amp; typeof module !== &apos;undefined&apos; ? factory(exports) :     typeof define === &apos;">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://vidahaha.github.io/archives/"/>
+  <link rel="canonical" href="http://vidahaha.github.io/2017/11/23/echarts源码探究-1/"/>
 
 
 
 
 
-  <title>归档 | vidahaha</title>
+  <title>echarts源码探究-1 | vidahaha</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,411 +249,193 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vidahaha.github.io/2017/11/23/echarts源码探究-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vidahaha">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="vidahaha">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">echarts源码探究-1</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-23T20:28:00+08:00">
+                2017-11-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 19 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web开发/" itemprop="url" rel="index">
+                    <span itemprop="name">web开发</span>
+                  </a>
+                </span>
 
-      
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web开发/源码探究/" itemprop="url" rel="index">
+                    <span itemprop="name">源码探究</span>
+                  </a>
+                </span>
 
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/23/echarts源码探究-1/" itemprop="url">
-              
-                <span itemprop="name">echarts源码探究-1</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-23T20:28:00+08:00"
-              content="2017-11-23" >
-          11-23
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/21/php调用shell命令遇到的问题和解决/" itemprop="url">
-              
-                <span itemprop="name">php调用shell命令遇到的问题和解决</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-21T11:38:07+08:00"
-              content="2017-11-21" >
-          11-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/19/HTML5语义化/" itemprop="url">
-              
-                <span itemprop="name">HTML5语义化</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-19T15:35:47+08:00"
-              content="2017-11-19" >
-          11-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h3 id="概括"><a href="#概括" class="headerlink" title="概括"></a>概括</h3><blockquote><p>对canvas中绑定事件还挺感兴趣，图表框架在之前只用过，没有了解内部原理，抽点时间研究下:)</p>
+</blockquote>
+<h3 id="开头"><a href="#开头" class="headerlink" title="开头"></a>开头</h3><pre><code class="js">(<span class="function"><span class="keyword">function</span> (<span class="params">global, factory</span>) </span>{
+    <span class="keyword">typeof</span> exports === <span class="string">'object'</span> &amp;&amp; <span class="keyword">typeof</span> <span class="built_in">module</span> !== <span class="string">'undefined'</span> ? factory(exports) :
+    <span class="keyword">typeof</span> define === <span class="string">'function'</span> &amp;&amp; define.amd ? define([<span class="string">'exports'</span>], factory) :
+    (factory((global.echarts = {})));
+    <span class="comment">// global 为 全局环境</span>
+    <span class="comment">// 这里通过两次三元运算，依次判断模块机制commonJS,AMD,</span>
+    <span class="comment">// 都没有的话直接把echart挂载在global上。</span>
+    <span class="comment">// 这是一种典型的兼容加载规范，称之：UMD。</span>
+}(<span class="keyword">this</span>, (<span class="function"><span class="keyword">function</span> (<span class="params">exports</span>)</span>{
+  <span class="comment">// main code</span>
+})));
+</code></pre>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/18/W3C规范与标准/" itemprop="url">
-              
-                <span itemprop="name">W3C规范与标准</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-18T13:22:20+08:00"
-              content="2017-11-18" >
-          11-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/17/各种引用类型的操作方法-3/" itemprop="url">
-              
-                <span itemprop="name">各种引用类型的操作方法-3</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-17T11:58:00+08:00"
-              content="2017-11-17" >
-          11-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/16/一天一个正则表达式/" itemprop="url">
-              
-                <span itemprop="name">一天一个正则表达式</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-16T12:39:42+08:00"
-              content="2017-11-16" >
-          11-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/15/各种引用类型的操作方法-2/" itemprop="url">
-              
-                <span itemprop="name">各种引用类型的操作方法-2</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-15T18:26:13+08:00"
-              content="2017-11-15" >
-          11-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/09/各种引用类型的操作方法-1/" itemprop="url">
-              
-                <span itemprop="name">各种引用类型的操作方法-1</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-09T21:19:01+08:00"
-              content="2017-11-09" >
-          11-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/08/高性能网站建设指南-5/" itemprop="url">
-              
-                <span itemprop="name">高性能网站建设指南-5</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-08T13:16:27+08:00"
-              content="2017-11-08" >
-          11-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/07/高性能网站建设指南-4/" itemprop="url">
-              
-                <span itemprop="name">高性能网站建设指南-4</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-07T09:49:42+08:00"
-              content="2017-11-07" >
-          11-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/echarts源码探究/" rel="tag"># echarts源码探究</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/21/php调用shell命令遇到的问题和解决/" rel="next" title="php调用shell命令遇到的问题和解决">
+                <i class="fa fa-chevron-left"></i> php调用shell命令遇到的问题和解决
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -659,6 +443,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -679,8 +467,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -742,6 +539,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概括"><span class="nav-number">1.</span> <span class="nav-text">概括</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开头"><span class="nav-number">2.</span> <span class="nav-text">开头</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -876,6 +689,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
