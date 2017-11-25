@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="vidahaha">
 <meta property="og:description" content="Array中的遍历方法arr.every( callback[, thisArg] ) 方法测试数组的所有元素是否都通过了指定函数的测试。callback 被调用时传入三个参数：元素值，元素的索引，原数组。只要出现不符合的元素，即刻返回false。  12345678910// ------------------------every-----------------------------le">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-25T02:38:09.640Z">
+<meta property="og:updated_time" content="2017-11-25T02:46:14.999Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="各种引用类型的操作方法-4">
 <meta name="twitter:description" content="Array中的遍历方法arr.every( callback[, thisArg] ) 方法测试数组的所有元素是否都通过了指定函数的测试。callback 被调用时传入三个参数：元素值，元素的索引，原数组。只要出现不符合的元素，即刻返回false。  12345678910// ------------------------every-----------------------------le">
@@ -366,6 +366,9 @@
         <h3 id="Array中的遍历方法"><a href="#Array中的遍历方法" class="headerlink" title="Array中的遍历方法"></a>Array中的遍历方法</h3><blockquote><p>arr.every( callback[, thisArg] ) 方法测试数组的所有元素是否都通过了指定函数的测试。<br>callback 被调用时传入三个参数：元素值，元素的索引，原数组。只要出现不符合的元素，即刻返回false。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ------------------------every-----------------------------</span></div><div class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.every( <span class="function"><span class="keyword">function</span>(<span class="params">ele, index, arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>( ele &gt;= <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">&#125;)) <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.every( <span class="function"><span class="keyword">function</span>(<span class="params">ele, index, arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>( ele &gt;= <span class="number">2</span>) <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">&#125;)) <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<h3 id="Array-prototype-fill"><a href="#Array-prototype-fill" class="headerlink" title="Array.prototype.fill"></a>Array.prototype.fill</h3><blockquote><p>arr.fill( value[, start[, end]] ) 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"><span class="built_in">console</span>.log( arr.fill(<span class="number">1</span>) ) <span class="comment">// [ 1, 1, 1, 1 ]</span></div><div class="line"><span class="built_in">console</span>.log( <span class="built_in">Array</span>(<span class="number">4</span>).fill(<span class="number">1</span>) ) <span class="comment">// [ 1, 1, 1, 1 ]</span></div></pre></td></tr></table></figure>
       
     </div>
     
@@ -537,7 +540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array中的遍历方法"><span class="nav-number">1.</span> <span class="nav-text">Array中的遍历方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array中的遍历方法"><span class="nav-number">1.</span> <span class="nav-text">Array中的遍历方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-fill"><span class="nav-number">2.</span> <span class="nav-text">Array.prototype.fill</span></a></li></ol></div>
             
 
           </div>
