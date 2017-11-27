@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Array中的遍历方法arr.every( callback[, thisArg] ) 方法测试数组的所有元素是否都通过了指定函数的测试。callback 被调用时传入三个参数：元素值，元素的索引，原数组。只要出现不符合的元素，即刻返回false。  12345678910// ------------------------every-----------------------------le">
+<meta name="description" content="Array中的遍历方法arr.every( callback[, thisArg] ) 方法测试数组的所有元素是否都通过了指定函数的测试。callback 被调用时传入三个参数：元素值，元素的索引，原数组。只要出现不符合的元素，即刻返回false。 arr.filter( callback[, thisArg] ) 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。callback">
 <meta name="keywords" content="引用类型的各种操作方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="各种引用类型的操作方法-4">
 <meta property="og:url" content="http://vidahaha.github.io/2017/11/25/各种引用类型的操作方法-4/index.html">
 <meta property="og:site_name" content="vidahaha">
-<meta property="og:description" content="Array中的遍历方法arr.every( callback[, thisArg] ) 方法测试数组的所有元素是否都通过了指定函数的测试。callback 被调用时传入三个参数：元素值，元素的索引，原数组。只要出现不符合的元素，即刻返回false。  12345678910// ------------------------every-----------------------------le">
+<meta property="og:description" content="Array中的遍历方法arr.every( callback[, thisArg] ) 方法测试数组的所有元素是否都通过了指定函数的测试。callback 被调用时传入三个参数：元素值，元素的索引，原数组。只要出现不符合的元素，即刻返回false。 arr.filter( callback[, thisArg] ) 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。callback">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-25T02:46:14.999Z">
+<meta property="og:updated_time" content="2017-11-27T09:27:45.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="各种引用类型的操作方法-4">
-<meta name="twitter:description" content="Array中的遍历方法arr.every( callback[, thisArg] ) 方法测试数组的所有元素是否都通过了指定函数的测试。callback 被调用时传入三个参数：元素值，元素的索引，原数组。只要出现不符合的元素，即刻返回false。  12345678910// ------------------------every-----------------------------le">
+<meta name="twitter:description" content="Array中的遍历方法arr.every( callback[, thisArg] ) 方法测试数组的所有元素是否都通过了指定函数的测试。callback 被调用时传入三个参数：元素值，元素的索引，原数组。只要出现不符合的元素，即刻返回false。 arr.filter( callback[, thisArg] ) 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。callback">
 
 
 
@@ -364,11 +364,18 @@
 
       
         <h3 id="Array中的遍历方法"><a href="#Array中的遍历方法" class="headerlink" title="Array中的遍历方法"></a>Array中的遍历方法</h3><blockquote><p>arr.every( callback[, thisArg] ) 方法测试数组的所有元素是否都通过了指定函数的测试。<br>callback 被调用时传入三个参数：元素值，元素的索引，原数组。只要出现不符合的元素，即刻返回false。</p>
+<p>arr.filter( callback[, thisArg] ) 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。callback 返回true表示保留该元素（通过测试），false则不保留。</p>
+<p>arr.find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。</p>
+<p>arr.findIndex() 方法返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。</p>
+<p>arr.forEach() 方法对数组的每个元素执行一次提供的函数。</p>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ------------------------every-----------------------------</span></div><div class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.every( <span class="function"><span class="keyword">function</span>(<span class="params">ele, index, arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>( ele &gt;= <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">&#125;)) <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.every( <span class="function"><span class="keyword">function</span>(<span class="params">ele, index, arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>( ele &gt;= <span class="number">2</span>) <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">&#125;)) <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ------------------------every-----------------------------</span></div><div class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.every( <span class="function"><span class="keyword">function</span>(<span class="params">ele, index, arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>( ele &gt;= <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">&#125;)) <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.every( <span class="function"><span class="keyword">function</span>(<span class="params">ele, index, arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>( ele &gt;= <span class="number">2</span>) <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">&#125;)) <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.filter( <span class="function"><span class="keyword">function</span>(<span class="params">ele, index, arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>( ele &gt;= <span class="number">2</span>) <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">&#125;)) <span class="comment">// [2, 3, 4]</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.find( <span class="function"><span class="keyword">function</span>(<span class="params">ele, index, array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> ele &gt;= <span class="number">4</span></div><div class="line">&#125;)) <span class="comment">// 4</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.findIndex( <span class="function"><span class="keyword">function</span>(<span class="params">ele, index, array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> ele &gt;= <span class="number">4</span></div><div class="line">&#125;)) <span class="comment">// 3</span></div></pre></td></tr></table></figure>
 <h3 id="Array-prototype-fill"><a href="#Array-prototype-fill" class="headerlink" title="Array.prototype.fill"></a>Array.prototype.fill</h3><blockquote><p>arr.fill( value[, start[, end]] ) 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"><span class="built_in">console</span>.log( arr.fill(<span class="number">1</span>) ) <span class="comment">// [ 1, 1, 1, 1 ]</span></div><div class="line"><span class="built_in">console</span>.log( <span class="built_in">Array</span>(<span class="number">4</span>).fill(<span class="number">1</span>) ) <span class="comment">// [ 1, 1, 1, 1 ]</span></div></pre></td></tr></table></figure>
+<h3 id="Array-prototype-includes"><a href="#Array-prototype-includes" class="headerlink" title="Array.prototype.includes"></a>Array.prototype.includes</h3><blockquote></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -540,7 +547,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array中的遍历方法"><span class="nav-number">1.</span> <span class="nav-text">Array中的遍历方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-fill"><span class="nav-number">2.</span> <span class="nav-text">Array.prototype.fill</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array中的遍历方法"><span class="nav-number">1.</span> <span class="nav-text">Array中的遍历方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-fill"><span class="nav-number">2.</span> <span class="nav-text">Array.prototype.fill</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-includes"><span class="nav-number">3.</span> <span class="nav-text">Array.prototype.includes</span></a></li></ol></div>
             
 
           </div>
