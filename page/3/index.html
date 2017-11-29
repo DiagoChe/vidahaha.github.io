@@ -262,6 +262,167 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vidahaha.github.io/2017/10/31/front-end-checklist-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vidahaha">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="vidahaha">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/31/front-end-checklist-1/" itemprop="url">front-end-checklist-1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-31T10:34:09+08:00">
+                2017-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web开发/" itemprop="url" rel="index">
+                    <span itemprop="name">web开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web开发/front-end-checklist/" itemprop="url" rel="index">
+                    <span itemprop="name">front-end-checklist</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote><p>Based on <a href="https://github.com/thedaviddias/Front-End-Checklist" target="_blank" rel="external">https://github.com/thedaviddias/Front-End-Checklist</a></p>
+</blockquote>
+<h2 id="在部署html-网站之前你需要的一份详尽的清单"><a href="#在部署html-网站之前你需要的一份详尽的清单" class="headerlink" title="在部署html/网站之前你需要的一份详尽的清单"></a>在部署html/网站之前你需要的一份详尽的清单</h2><h3 id="1-Doctype"><a href="#1-Doctype" class="headerlink" title="1. Doctype"></a>1. Doctype</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Doctype HTML5 --&gt;</span></div><div class="line"><span class="meta">&lt;!doctype html&gt;</span> </div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Doctype HTML4.01 Strict --&gt;</span></div><div class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span></div></pre></td></tr></table></figure>
+<blockquote><p>(1) &lt;!doctype&gt; 声明必须是html文档的第一行，位于html标签之前。<br>(2) &lt;!doctype&gt; 声明不是html页面，它是指示web浏览器关于页面使用哪个html版本进行编写的命令。<br>(3) 在html4.01中，&lt;!doctype&gt;声明引用DTD，因为html4.01基于<font color="red">SGML(标准通用标记语  言,SGML 是一种很强大但很复杂的标记语言，HTML、XML 就是从中衍生出来的)</font>。DTD 规定了标记语言的规则，这样浏览器才能正确地呈现内容。<br>(4) HTML5 不基于 SGML，所以不需要引用 DTD。<br>(5) <font color="red">请始终向 HTML 文档添加 &lt;!DOCTYPE&gt; 声明，这样浏览器才能获知文档类型。</font></p>
+</blockquote>
+<h3 id="2-Charset"><a href="#2-Charset" class="headerlink" title="2. Charset"></a>2. Charset</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- html5 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- HTML4.01 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote><p>(1) charset 属性规定 HTML 文档的字符编码。<br>(2) charset 属性可以通过任意元素上的 lang 属性来重写。<br>(3) charset 属性是 HTML5 中的新属性，仍然允许使用 http-equiv 属性来规定字符集，但是使用新方法可以减少代码量。<br>(4) 在理论上，可以使用任何字符编码，但并不是所有浏览器都能够理解它们。某种字符编码使用的范围越广，浏览器就越有可能理解它。</p>
+</blockquote>
+<blockquote><p>补充下meta:<br>meta是用来在HTML文档中模拟HTTP协议的响应头报文,META标签是HTML语言HEAD区的一个辅助性标签，它位于HTML文档头部的&lt;HEAD&gt;标记和&lt;TITLE&gt;标记之间，它提供用户不可见的信息。meta标签通常用来为搜索引擎robots定义页面主题，或者是定义用户浏览器上的cookie；它可以用于鉴别作者，设定页面格式，标注内容提要和关键字；还可以设置页面使其可以根据你定义的时间间隔刷新自己,以及设置RASC内容等级，等等。</p>
+</blockquote>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://vidahaha.github.io/2017/10/30/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -442,7 +603,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
