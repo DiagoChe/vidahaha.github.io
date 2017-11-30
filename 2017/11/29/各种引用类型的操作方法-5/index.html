@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="vidahaha">
 <meta property="og:description" content="Array.prototype.reduce 和 reduceRightarr.reduce(callback[, initialValue]) 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值。注意：如果没有提供initialValue，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。如果提供initialValue，从索引0开始。 arr">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-29T09:29:14.437Z">
+<meta property="og:updated_time" content="2017-11-30T10:37:39.551Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="各种引用类型的操作方法-5">
 <meta name="twitter:description" content="Array.prototype.reduce 和 reduceRightarr.reduce(callback[, initialValue]) 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值。注意：如果没有提供initialValue，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。如果提供initialValue，从索引0开始。 arr">
@@ -367,6 +367,13 @@
 <p>arr.reduceRight() 方法接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值。与  Array.prototype.reduce() 的执行方向相反</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">accumulator, currentValue, currentIndex, array</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log( accumulator ) <span class="comment">// 1, 3, 6</span></div><div class="line">	<span class="built_in">console</span>.log( currentValue ) <span class="comment">// 2, 3, 4</span></div><div class="line">	<span class="keyword">return</span> accumulator + currentValue</div><div class="line">&#125;)) <span class="comment">// 10</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.reduceRight(<span class="function"><span class="keyword">function</span>(<span class="params">accumulator, currentValue, currentIndex, array</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log( accumulator ) <span class="comment">// 4, 7, 9</span></div><div class="line">	<span class="built_in">console</span>.log( currentValue ) <span class="comment">// 3, 2, 1</span></div><div class="line">	<span class="keyword">return</span> accumulator + currentValue</div><div class="line">&#125;))</div></pre></td></tr></table></figure>
+<h3 id="Array-prototype-reverse"><a href="#Array-prototype-reverse" class="headerlink" title="Array.prototype.reverse"></a>Array.prototype.reverse</h3><blockquote><p>arr.reverse() 方法将数组中元素的位置颠倒。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"><span class="built_in">console</span>.log( arr.reverse() ) <span class="comment">// ​​​​​[ 4, 3, 2, 1 ]​​​​​</span></div></pre></td></tr></table></figure>
+<h3 id="Array-prototype-shift-和-unshift"><a href="#Array-prototype-shift-和-unshift" class="headerlink" title="Array.prototype.shift 和 unshift"></a>Array.prototype.shift 和 unshift</h3><blockquote><p>arr.shift() 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。<br>arr.unshift() 方法将一个或多个元素添加到数组的开头，并返回新数组的长度。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"><span class="built_in">console</span>.log( arr.shift() ) <span class="comment">// 1</span></div><div class="line"><span class="built_in">console</span>.log( arr ) <span class="comment">// ​​​​​[ 2, 3, 4 ]​​​​​</span></div><div class="line"><span class="built_in">console</span>.log( arr.unshift(<span class="number">1</span>) ) <span class="comment">// 4</span></div><div class="line"><span class="built_in">console</span>.log( arr ) <span class="comment">// ​​​​​[ 1, 2, 3, 4 ]​​​​​</span></div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -542,7 +549,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-reduce-和-reduceRight"><span class="nav-number">1.</span> <span class="nav-text">Array.prototype.reduce 和 reduceRight</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-reduce-和-reduceRight"><span class="nav-number">1.</span> <span class="nav-text">Array.prototype.reduce 和 reduceRight</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-reverse"><span class="nav-number">2.</span> <span class="nav-text">Array.prototype.reverse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-shift-和-unshift"><span class="nav-number">3.</span> <span class="nav-text">Array.prototype.shift 和 unshift</span></a></li></ol></div>
             
 
           </div>
