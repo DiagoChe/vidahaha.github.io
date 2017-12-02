@@ -262,6 +262,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vidahaha.github.io/2017/12/02/service-worker-初探/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vidahaha">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="vidahaha">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/02/service-worker-初探/" itemprop="url">service worker 初探</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-02T16:11:02+08:00">
+                2017-12-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web开发/" itemprop="url" rel="index">
+                    <span itemprop="name">web开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote><p>在使用react的脚手架时，遇到了内置的ServiceWorker，这个新东西很有意思。</p>
+</blockquote>
+<h3 id="概括"><a href="#概括" class="headerlink" title="概括"></a>概括</h3><blockquote><p>service workers 本质上充当Web应用程序与浏览器之间的代理服务器，也可以在网络可用时作为浏览器和网络间的代理。它们旨在（除其他之外）使得能够创建有效的离线体验，拦截网络请求并基于网络是否可用以及更新的资源是否驻留在服务器上来采取适当的动作。他们还允许访问推送通知和后台同步API。</p>
+</blockquote>
+<h3 id="周期"><a href="#周期" class="headerlink" title="周期"></a>周期</h3><blockquote><ol>
+<li>安装</li>
+<li>激活，激活成功之后，打开chrome://inspect/#service-workers可以查看到当前运行的service worker</li>
+<li>监听fetch和message事件</li>
+<li>销毁，是否销毁由浏览器决定，如果一个service worker长期不使用或者机器内存有限，则可能会销毁这个worker</li>
+</ol>
+</blockquote>
+<h3 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h3><blockquote><p>在页面发起http请求时，service worker可以通过fetch事件拦截请求，并且给出自己的响应。</p>
+</blockquote>
+<h3 id="message"><a href="#message" class="headerlink" title="message"></a>message</h3><blockquote><p>页面和serviceWorker之间可以通过posetMessage()方法发送消息，发送的消息可以通过message事件接收到。<br>这是一个双向的过程，页面可以发消息给service worker，service worker也可以发送消息给页面，由于这个特性，可以将service worker作为中间纽带，使得一个域名或者子域名下的多个页面可以自由通信。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://vidahaha.github.io/2017/11/30/网格布局的实现原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1714,167 +1870,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vidahaha.github.io/2017/11/16/一天一个正则表达式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vidahaha">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="vidahaha">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/16/一天一个正则表达式/" itemprop="url">一天一个正则表达式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-16T12:39:42+08:00">
-                2017-11-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web开发/" itemprop="url" rel="index">
-                    <span itemprop="name">web开发</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web开发/正则表达式/" itemprop="url" rel="index">
-                    <span itemprop="name">正则表达式</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="概括"><a href="#概括" class="headerlink" title="概括"></a>概括</h3><p><em>不得不说，正则表达式是一个非常考验逻辑力的知识，每天想一个做着玩，还挺有意思额:)</em></p>
-<h3 id="电话号码"><a href="#电话号码" class="headerlink" title="电话号码"></a>电话号码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> reg = <span class="regexp">/^1[3579][0-9]&#123;9&#125;$/</span></div><div class="line"><span class="keyword">let</span> input = <span class="string">'13272825763'</span></div><div class="line"><span class="built_in">console</span>.log( reg.test( input ) ) <span class="comment">// true</span></div></pre></td></tr></table></figure>
-<h3 id="URL中参数的获取"><a href="#URL中参数的获取" class="headerlink" title="URL中参数的获取"></a>URL中参数的获取</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> reg = <span class="regexp">/(\?|\&amp;)(.+?)(\&amp;|$)/g</span></div><div class="line"><span class="keyword">let</span> input = <span class="string">"?name='vida'&amp;&amp;age='19'&amp;&amp;speed='20'"</span></div><div class="line"><span class="keyword">let</span> res = reg.exec( input ) </div><div class="line"><span class="built_in">console</span>.log( res[<span class="number">2</span>] )     <span class="comment">// ​​​​​name='vida'​​​​​ </span></div><div class="line"><span class="keyword">let</span> res_1 =  reg.exec( input ) </div><div class="line"><span class="built_in">console</span>.log( res_1[<span class="number">2</span>] )   <span class="comment">// ​​​​​age='19'​​​​​</span></div><div class="line"><span class="keyword">let</span> res_2 =  reg.exec( input ) </div><div class="line"><span class="built_in">console</span>.log( res_2[<span class="number">2</span>] )   <span class="comment">// ​​​​​speed='20'​​​​​</span></div></pre></td></tr></table></figure>
-<h3 id="判断ip地址"><a href="#判断ip地址" class="headerlink" title="判断ip地址"></a>判断ip地址</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> reg = <span class="regexp">/^((25[0-5]|2[0-4]\d|1\d&#123;2&#125;|[1-9]?\d)\.)&#123;3&#125;(25[0-5]|2[0-4]\d|1\d&#123;2&#125;|[1-9]?\d)$/</span></div><div class="line"><span class="keyword">let</span> input = <span class="string">'255.1.130.26'</span></div><div class="line"><span class="built_in">console</span>.log( reg.test( input ) ) <span class="comment">// true</span></div></pre></td></tr></table></figure>
-<h3 id="非捕获括号"><a href="#非捕获括号" class="headerlink" title="非捕获括号"></a>非捕获括号</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> input = <span class="string">'foofoofoo'</span></div><div class="line"><span class="keyword">let</span> reg = <span class="regexp">/(?:foo)&#123;1,2&#125;/</span></div><div class="line"><span class="built_in">console</span>.log( reg.exec( input ) ) <span class="comment">// ​​​​​[ 'foofoo', index: 0, input: 'foofoofoo' ]</span></div><div class="line">                                 <span class="comment">// (?:x)匹配x但是不记住x, 即非捕获。</span></div><div class="line">    ​​​​​</div><div class="line"><span class="keyword">let</span> reg_1 = <span class="regexp">/(foo)&#123;1,2&#125;/</span></div><div class="line"><span class="built_in">console</span>.log( reg_1.exec( input ) ) <span class="comment">// ​​​​​[ 'foofoo', 'foo', index: 0, input: 'foofoofoo' ]​​​​​</span></div></pre></td></tr></table></figure>
-<h3 id="获取html中a标签的内容及链接地址"><a href="#获取html中a标签的内容及链接地址" class="headerlink" title="获取html中a标签的内容及链接地址"></a>获取html中a标签的内容及链接地址</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> reg = <span class="regexp">/\&lt;a\s(?:href\s*=\s*['"](.*)['"]).*?&gt;(.*)\&lt;\/a\&gt;/g</span></div><div class="line"><span class="keyword">let</span> input = <span class="string">`</span></div><div class="line"><span class="string">&lt;!doctype html&gt;</span></div><div class="line"><span class="string">&lt;html lang="en"&gt;</span></div><div class="line"><span class="string">    &lt;head&gt;&lt;/head&gt;</span></div><div class="line"><span class="string">    &lt;body&gt;</span></div><div class="line"><span class="string">        &lt;header&gt;</span></div><div class="line"><span class="string">            &lt;a href="www.baidu.com"&gt;百度一下&lt;/a&gt;</span></div><div class="line"><span class="string">        &lt;/header&gt;</span></div><div class="line"><span class="string">        &lt;footer&gt;</span></div><div class="line"><span class="string">            &lt;a href="www.taobao.com"&gt;我要淘宝&lt;/a&gt;</span></div><div class="line"><span class="string">        &lt;footer&gt;</span></div><div class="line"><span class="string">    &lt;/body&gt;</span></div><div class="line"><span class="string">&lt;/html&gt;</span></div><div class="line"><span class="string">`</span></div><div class="line"><span class="keyword">let</span> res = reg.exec( input )</div><div class="line"><span class="keyword">let</span> res_1 = reg.exec( input )</div><div class="line"><span class="built_in">console</span>.log( res[<span class="number">1</span>] )  <span class="comment">// ​​​​​www.baidu.com​​​​​</span></div><div class="line"><span class="built_in">console</span>.log( res[<span class="number">2</span>] )  <span class="comment">// ​​​​​百度一下​​​​​</span></div><div class="line"><span class="built_in">console</span>.log( res_1[<span class="number">1</span>] ) <span class="comment">// ​​​​​www.taobao.com​​​​​</span></div><div class="line"><span class="built_in">console</span>.log( res_1[<span class="number">2</span>] ) <span class="comment">//​​​​​ 我要淘宝​​​​​</span></div></pre></td></tr></table></figure>
-<h3 id="获取文本中的基因名称"><a href="#获取文本中的基因名称" class="headerlink" title="获取文本中的基因名称"></a>获取文本中的基因名称</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> reg = <span class="regexp">/\bLOC_Os\w&#123;8&#125;\b/g</span></div><div class="line"><span class="keyword">let</span> input = <span class="string">`</span></div><div class="line"><span class="string">input1	LOC_Os01g01830	100.000	7413	0	0	1	7413	139	7551	0.0	13690</span></div><div class="line"><span class="string">input1	LOC_Os01g01830	99.979	4734	1	0	7411	12144	7928	12661	0.0	8737</span></div><div class="line"><span class="string">input1	LOC_Os01g01830	100.000	55	0	0	7620	7674	8084	8138	2.69e-20	102</span></div><div class="line"><span class="string">input1	LOC_Os01g01830	100.000	55	0	0	7567	7621	8137	8191	2.69e-20	102</span></div><div class="line"><span class="string">input1	LOC_Os01g01830	100.000	49	0	0	4678	4726	4768	4816	5.82e-17	91.6</span></div><div class="line"><span class="string">input1	LOC_Os01g01830	100.000	49	0	0	4630	4678	4816	4864	5.82e-17	91.6</span></div><div class="line"><span class="string">input1	LOC_Os01g45880	81.587	315	25	14	3914	4198	10380	10069	1.18e-58</span></div><div class="line"><span class="string">`</span></div><div class="line"><span class="built_in">console</span>.log( input.match(reg) ) </div><div class="line"><span class="comment">// ​​​​​[ 'LOC_Os01g01830',​​​​​</span></div><div class="line"><span class="comment">// ​​​​​  'LOC_Os01g01830',​​​​​</span></div><div class="line"><span class="comment">// ​​​​​  'LOC_Os01g01830',​​​​​</span></div><div class="line"><span class="comment">// ​​​​​  'LOC_Os01g01830',​​​​​</span></div><div class="line"><span class="comment">// ​​​​​  'LOC_Os01g01830',​​​​​</span></div><div class="line"><span class="comment">// ​​​​​  'LOC_Os01g01830',​​​​​</span></div><div class="line"><span class="comment">// ​​​​​  'LOC_Os01g45880' ]​​​​​</span></div></pre></td></tr></table></figure>
-<h3 id="代理头检测操作系统版本"><a href="#代理头检测操作系统版本" class="headerlink" title="代理头检测操作系统版本"></a>代理头检测操作系统版本</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> reg = <span class="regexp">/\((?:Windows\sNT\s(\d&#123;1,2&#125;\.\d);\s\w&#123;5&#125;;\sx(\d\d))\)/g</span></div><div class="line"><span class="keyword">let</span> input = <span class="string">`Mozilla/5.0 (Windows NT 10.0; Win64; x64) </span></div><div class="line"><span class="string">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36`</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> res = reg.exec( input )</div><div class="line"><span class="built_in">console</span>.log( res[<span class="number">1</span>] ) <span class="comment">// 10.0 对应win10</span></div><div class="line"><span class="built_in">console</span>.log( res[<span class="number">2</span>] ) <span class="comment">// 64 对应64位</span></div></pre></td></tr></table></figure>
-<h3 id="正则中-b和-B的研究"><a href="#正则中-b和-B的研究" class="headerlink" title="正则中\b和\B的研究"></a>正则中\b和\B的研究</h3><p><em>\b只适用于找到单词，不适用其他的组合之类的比如(xx)</em><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> reg = <span class="regexp">/\bhello\b/g</span></div><div class="line"><span class="keyword">let</span> input = <span class="string">` hello world! (from xhellox) `</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> res = reg.exec( input )</div><div class="line"><span class="built_in">console</span>.log( res ) <span class="comment">// 前面的hello 它两边都有单词边界(空格)</span></div><div class="line"><span class="comment">// -------------------------------------------------------</span></div><div class="line"><span class="keyword">let</span> reg = <span class="regexp">/\Bhello\B/g</span></div><div class="line"><span class="keyword">let</span> input = <span class="string">` hello world! (from xhellox) `</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> res = reg.exec( input )</div><div class="line"><span class="built_in">console</span>.log( res ) <span class="comment">// 后面的hello 它两边都没有单词边界</span></div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1925,7 +1920,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1947,7 +1942,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
