@@ -370,7 +370,6 @@
 </blockquote>
 <h3 id="message"><a href="#message" class="headerlink" title="message"></a>message</h3><blockquote><p>页面和serviceWorker之间可以通过posetMessage()方法发送消息，发送的消息可以通过message事件接收到。<br>这是一个双向的过程，页面可以发消息给service worker，service worker也可以发送消息给页面，由于这个特性，可以将service worker作为中间纽带，使得一个域名或者子域名下的多个页面可以自由通信。</p>
 </blockquote>
-
           
         
       
@@ -684,9 +683,12 @@
 <h3 id="Array-prototype-sort"><a href="#Array-prototype-sort" class="headerlink" title="Array.prototype.sort"></a>Array.prototype.sort</h3><blockquote><p>arr.sort( [fn] ) 方法在适当的位置对数组的元素进行排序，并返回数组。 sort 排序不一定是稳定的。默认排序顺序是根据字符串Unicode码点。<br>如果 fn(a, b) 小于 0 ，那么 a 会被排列到 b 之前；<br>如果 fn(a, b) 大于 0 ，那么 a 会被排列到 b 之后； </p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">10</span>]</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( arr.sort() ) <span class="comment">// ​​​​​[ 1, 10, 2 ]</span></div><div class="line"><span class="built_in">console</span>.log( arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> a - b </div><div class="line">&#125;) ) <span class="comment">// ​​​​​[ 1, 2, 10 ]</span></div><div class="line"><span class="built_in">console</span>.log( arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> b - a</div><div class="line">&#125;) ) <span class="comment">// ​​​​​[ 10, 2, 1 ]​​​​​</span></div></pre></td></tr></table></figure>
-<h3 id="Array-prototype-sort-1"><a href="#Array-prototype-sort-1" class="headerlink" title="Array.prototype.sort"></a>Array.prototype.sort</h3><blockquote><p>arr.splice(start) 方法通过删除现有元素和/或添加新元素来更改一个数组的内容。</p>
+<h3 id="Array-prototype-splice"><a href="#Array-prototype-splice" class="headerlink" title="Array.prototype.splice"></a>Array.prototype.splice</h3><blockquote><p>arr.splice(start) 方法通过删除现有元素和/或添加新元素来更改一个数组的内容。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"><span class="built_in">console</span>.log( arr.splice(<span class="number">0</span>, <span class="number">1</span>)) <span class="comment">// [1]</span></div><div class="line"><span class="built_in">console</span>.log( arr ) <span class="comment">// [2, 3, 4]</span></div><div class="line"><span class="built_in">console</span>.log( arr.splice(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>)) <span class="comment">// []</span></div><div class="line"><span class="built_in">console</span>.log( arr ) <span class="comment">// [1, 2, 3, 4]</span></div></pre></td></tr></table></figure>
+<h3 id="Array-prototype-toString"><a href="#Array-prototype-toString" class="headerlink" title="Array.prototype.toString"></a>Array.prototype.toString</h3><blockquote><p>Array 对象覆盖了 Object 的 toString 方法。对于数组对象，toString 方法返回一个字符串，该字符串由数组中的每个元素的 toString() 返回值经调用 join() 方法连接（由逗号隔开）组成。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arr = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</div><div class="line"><span class="built_in">console</span>.log( arr.toString() ) <span class="comment">// a,b,c</span></div></pre></td></tr></table></figure>
           
         
       
@@ -858,8 +860,6 @@
 </ul>
 </blockquote>
 <h3 id="网易游戏-二面"><a href="#网易游戏-二面" class="headerlink" title="网易游戏(二面)"></a>网易游戏(二面)</h3><blockquote><ul>
-<li>自我介绍</li>
-<li>项目经历</li>
 <li>闭包及其作用</li>
 <li>跨域的几种方法</li>
 <li>css选择器</li>
@@ -869,8 +869,6 @@
 </ul>
 </blockquote>
 <h3 id="网易游戏-三面"><a href="#网易游戏-三面" class="headerlink" title="网易游戏(三面)"></a>网易游戏(三面)</h3><blockquote><ul>
-<li>自我介绍</li>
-<li>项目经历</li>
 <li>cookie的应用及其限制</li>
 <li>static 和 absolute 在 浏览器布局时 的不同(应该是涉及回流和重绘)</li>
 </ul>
